@@ -1,3 +1,21 @@
+def hoi
+    puts "あっち向いて〜"
+    puts "0(上)1(下)2(左)3(右)"
+    my_face = gets.to_i
+    pc_face = rand(4)
+    direction = ["上","下","右","左"]
+    puts "ホイ！"
+    puts "------------"
+    puts "あなた:#{direction[my_face]},相手:#{direction[pc_face]}"
+    if @janken_result = "win" && my_face == pc_face
+        puts "あなたの勝ちです！"
+    elsif @janken_result = "lose" && my_face == pc_face
+        puts "あなたの負けです"
+    else
+        puts "もう一回！じゃんけんぽん"
+        return
+    end
+end
 def jan
     puts "じゃんけん..."
     puts "0(グー)1(チョキ)2(パー)3(戦わない)"
@@ -19,23 +37,6 @@ def jan
         hoi
     end
 end
+jan
 
-def hoi
-    puts "あっち向いて〜"
-    puts "0(上)1(下)2(左)3(右)"
-    my_face = gets.to_i
-    pc_face = rand(4)
-    direction = ["上","下","右","左"]
-    puts "ホイ！"
-    puts "------------"
-    puts "あなた:#{direction[my_face]},相手:#{direction[pc_face]}"
-    if @janken_result = "win" && my_face == pc_face
-        puts "あなたの勝ちです！"
-    elsif @janken_result = "lose" && my_face == pc_face
-        puts "あなたの負けです"
-    else
-        puts "もう一回！じゃんけんぽん"
-        return
-    end
-end
 
